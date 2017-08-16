@@ -34,6 +34,7 @@ form {
   width: 256px;
   z-index: -1;
 
+  /* NOTE: Added transform and will-change*/
   transform: translateZ(0);
   will-change: transform;
 }
