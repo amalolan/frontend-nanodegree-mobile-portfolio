@@ -426,7 +426,7 @@ var resizePizzas = function(size) {
   // NOTE: Moved sizeSwitcher() from determineDx to the parent scope so that it can be used by changePizzaSizes()
 
   function sizeSwitcher (size) {
-    //NOTE: Expressed as percent instead of px. 
+    //NOTE: Expressed as percent instead of px.
     switch(size) {
       case "1":
         return 25;
@@ -495,10 +495,10 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
-
+  var arg1 = (document.body.scrollTop / 1250);
   var items = document.querySelectorAll('.mover');
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    var phase = Math.sin(arg1 + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
